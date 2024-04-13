@@ -1,0 +1,45 @@
+/*semicirculo*/
+.formularioinicio{
+    width: 90%; /* Cambiado a porcentaje para hacerlo responsive */
+    max-width: 620px; /* Ancho máximo */
+    height: 65vh; /* Cambiado a auto para hacerlo responsive */
+    border-radius: 46% 46% 0 0; /* Simplificado para círculo perfecto */
+    background: #E8E8E8;
+    padding: 30px;
+    margin: 100px auto; /* Centrar vertical y horizontalmente */
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+
+.report {
+    left: 38%;
+    top: 570px;
+}
+
+
+/*boton index*/
+.botonreportar{
+    width: 30%;
+    height: 50px;
+    border: 1px solid;
+    background: #3D5AF1;
+    border-radius: 25px;
+    font-size: 18px;   
+    color: white;
+    cursor: pointer;
+    outline: none;
+    left: 35%;
+    top: 75%;
+    position: absolute;
+}
+
+.botonreportar:hover{
+    border-color: black;
+    transition: .5s;
+}
+
+a {
+    text-decoration: none;
+}
