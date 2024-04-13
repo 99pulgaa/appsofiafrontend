@@ -60,7 +60,7 @@ export function validarRegistro() {
     }
 
     // Si la validación es exitosa, redireccionar a la página de registro exitoso
-    <Link to="/InicioComponent"></Link>
+    <Link to="/ListClientesComponents"></Link>
 }
 
 // Función para validar el email en el formulario de forgetpass
