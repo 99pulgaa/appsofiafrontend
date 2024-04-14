@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../css/RegistroComponent.css';
-import { validarRegistro, validarEmail } from '../components/validar.js';
-import { Link } from 'react-router-dom';
+import  {Link, useNavigate} from 'react-router-dom';
 
 export const RegistroComponent = () => {
     const [_cedula, setCedula] = useState('');
@@ -9,6 +8,7 @@ export const RegistroComponent = () => {
     const [_fechaNacimiento, setFechaNacimiento] = useState(null);
     const [_email, setEmail] = useState('');
     const [_contrasena, setContrasena] = useState('');
+    const navigate = useNavigate();
 
     const handleCedulaChange = (event) => {
         setCedula(event);
@@ -45,6 +45,7 @@ export const RegistroComponent = () => {
             body: JSON.stringify({ id, nombre, fechaNacimiento, email, contrasena }),
         }).then(response => {
             if (response.ok) {
+                navigate('/LoginComponent');
                 return response.text();
             } else {
                 throw new Error('Failed to create cliente');

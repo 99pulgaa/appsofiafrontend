@@ -5,6 +5,7 @@ import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import InicioComponent from './components/InicioComponent';
 import LoginComponent from './components/LoginComponent';
+import MenuComponent from './components/MenuComponent';
 import RegistroComponent from './components/RegistroComponent';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AddClienteComponent } from './components/AddClienteComponent';
@@ -20,6 +21,8 @@ function App() {
        <div className='container'>
         <Routes>
           <Route exact path='/' element={<InicioComponent />}></Route>
+          <Route path='/MenuComponent' element={<MenuComponent />}></Route>
+          <Route path='/InicioComponent' element={<InicioComponent />}></Route>
           <Route path='/RegistroComponent' element={<RegistroComponent />}></Route>
           <Route path='/LoginComponent' element={<LoginComponent />}></Route>
           <Route path='/listaClientes' element={<ListClientesComponents />}></Route>

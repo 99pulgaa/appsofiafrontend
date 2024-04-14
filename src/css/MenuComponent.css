@@ -1,0 +1,91 @@
+/*semicirculo*/
+.formulariomenu{
+    width: 90%; /* Cambiado a porcentaje para hacerlo responsive */
+    max-width: 620px; /* Ancho máximo */
+    height: 65vh; /* Cambiado a auto para hacerlo responsive */
+    border-radius: 46% 46% 0 0; /* Simplificado para círculo perfecto */
+    background: #E8E8E8;
+    padding: 30px;
+    margin: 100px auto; /* Centrar vertical y horizontalmente */
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+.bienvenido {
+    position: absolute;
+    text-align: center;
+    color: black;
+    padding: 0px;
+    width: 50%; /* Cambiado a porcentaje */
+    left: 25%; /* Centrado horizontalmente */
+    top: 35%; /* Ajustado verticalmente */
+    font-size: 2vw; /* Tamaño de fuente responsive */
+}
+
+.queharas {
+    position: absolute;
+    text-align: center;
+    color: black;
+    padding: 0px;
+    width: 50%; /* Cambiado a porcentaje */
+    left: 25%; /* Centrado horizontalmente */
+    font-size: 1vw; /* Tamaño de fuente responsive */
+    top: 45%; /* Ajustado verticalmente */
+}
+
+.controls {
+    width: 95%;
+    background: white;
+    padding: 5%;
+    border-radius: 40px;
+    margin-bottom: 16px;
+    border: 1px solid #0E153A;
+    color: black;
+}
+
+.imagenes {
+    width: 90%; /* Cambiado a porcentaje */
+    margin: auto; /* Centrado horizontalmente */
+    display: flex; /* Cambiado a flex para alinear elementos */
+    justify-content: space-around; /* Espacio uniforme entre elementos */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.capacitar,
+.reporte {
+    width: 30%; /* Cambiado a porcentaje */
+    text-align: center;
+    position: relative; /* Cambiado a relative para mover verticalmente */
+    top: 10vh; /* Ajustado verticalmente */
+}
+
+.textos {
+    width: 80%; /* Cambiado a porcentaje */
+    margin: auto; /* Centrado horizontalmente */
+    display: flex; /* Cambiado a flex para alinear elementos */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    align-items: center; /* Alinear verticalmente */
+    position: relative; /* Cambiado a relative para mover verticalmente */
+    top: 5vw; /* Ajustado verticalmente */
+}
+
+.texto1,
+.texto2 {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .bienvenido {
+        font-size: 5vw; /* Tamaño de fuente responsive para pantallas pequeñas */
+    }
+    
+    .queharas {
+        font-size: 3vw; /* Tamaño de fuente responsive para pantallas pequeñas */
+    }
+}

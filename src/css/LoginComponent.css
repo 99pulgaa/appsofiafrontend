@@ -1,86 +1,123 @@
 /*semicirculo*/
-.formulario{
-    width: 90%; /* Cambiado a porcentaje para hacerlo responsive */
-    max-width: 620px; /* Ancho máximo */
-    height: auto; /* Cambiado a auto para hacerlo responsive */
-    border-radius: 46% 46% 0 0; /* Simplificado para círculo perfecto */
+.formulario {
+    width: 90%;
+    /* Cambiado a porcentaje para hacerlo responsive */
+    max-width: 620px;
+    /* Ancho máximo */
+    height: 100%;
+    /* Cambiado a auto para hacerlo responsive */
+    border-radius: 46% 46% 0 0;
+    /* Simplificado para círculo perfecto */
     background: #E8E8E8;
     padding: 30px;
-    margin: 100px auto; /* Centrar vertical y horizontalmente */
+    margin: 100px auto;
+    /* Centrar vertical y horizontalmente */
     color: black;
     text-align: center;
     position: relative;
 }
 
-.parametros{
-    position: relative; /* Cambiado de absolute a relative */
-    margin-top: 30px; /* Espaciado superior */
-    width: 90%; /* Cambiado a porcentaje para hacerlo responsive */
-    max-width: 350px; /* Ancho máximo */
-    margin-left: auto; /* Centrar horizontalmente */
-    margin-right: auto; /* Centrar horizontalmente */
-    padding: 20px; /* Añadido espaciado interno */
+.parametros {
+    position: relative;
+    /* Cambiado de absolute a relative */
+    margin-top: 30px;
+    /* Espaciado superior */
+    width: 90%;
+    /* Cambiado a porcentaje para hacerlo responsive */
+    max-width: 350px;
+    /* Ancho máximo */
+    margin-left: auto;
+    /* Centrar horizontalmente */
+    margin-right: auto;
+    /* Centrar horizontalmente */
+    padding: 20px;
+    /* Añadido espaciado interno */
     background: white;
     border-radius: 20px;
 }
+
 .username {
     position: relative;
-    margin-bottom: 20px; /* Agregado margen inferior */
+    margin-bottom: 20px;
+    /* Agregado margen inferior */
 }
 
 .username input {
-    width: 100%; /* Cambiado a 100% para ser adaptable */
-    padding: 10px; /* Ajustado espaciado interior */
-    font-size: 16px; /* Tamaño del texto */
-    border: none;
+    width: 100%;
+    /* Cambiado a 100% para ser adaptable */
+    padding: 10px;
+    /* Ajustado espaciado interior */
+    font-size: 16px;
+    /* Tamaño del texto */
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: transparent;
     background: none;
     outline: none;
 }
+
+.username input.email.error,
+input.pass.error {
+    border-color: red;
+}
+
 
 .username label {
     position: absolute;
     top: 50%;
     left: 5px;
     color: #adadad;
-    transform: translateY(-50%);
+    transform: translateY(-80%);
     font-size: 16px;
     pointer-events: none;
     transition: .5s;
 }
 
-.username input:focus ~ label,
-.username input:focus ~ label{
-  top: -5px;
-  color: silver;
+.username input:focus~label {
+    top: -5px;
+    color: silver;
 }
 
-.username input:focus ~ span::before,
-.username input:focus ~ span::before{
-  width: 100%;
+.username input:focus~span::before,
+.username input:focus~span::before {
+    width: 100%;
 }
 
-.botoniniciar{
-    width: 70%; /* Cambiado a porcentaje para hacerlo responsive */
-    height: 40px; /* Ajustado el alto */
-    margin-top: 20px; /* Espaciado superior */
+.botoniniciar {
+    width: 70%;
+    /* Cambiado a porcentaje para hacerlo responsive */
+    height: 40px;
+    /* Ajustado el alto */
+    margin-top: 20px;
+    /* Espaciado superior */
     border: 1px solid;
     background: #3D5AF1;
     border-radius: 25px;
-    font-size: 18px;   
+    font-size: 18px;
     color: white;
     cursor: pointer;
     outline: none;
 }
-.botoniniciar:hover{
+
+.botoniniciar:hover {
     border-color: black;
     transition: .5s;
 }
 
-.recordar{
-    margin-top: 10px; /* Espaciado superior */
-    margin-right: 20px; /* Espaciado derecho */
+.recordar {
+    margin-top: 10px;
+    /* Espaciado superior */
+    margin-right: 20px;
+    /* Espaciado derecho */
     text-align: right;
     color: blue;
     font-size: 12px;
     cursor: pointer;
+}
+
+.logo {
+    /* width:290px;
+    height: 270px; */
+    width:13vw;
+    height: 13vw;
 }
