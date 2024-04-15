@@ -1,0 +1,97 @@
+/*semicirculo*/
+.formularioreporte {
+    width: 90%;
+    /* Cambiado a porcentaje para hacerlo responsive */
+    max-width: 620px;
+    /* Ancho máximo */
+    height: 100%;
+    /* Cambiado a auto para hacerlo responsive */
+    border-radius: 46% 46% 0 0;
+    /* Simplificado para círculo perfecto */
+    background: #E8E8E8;
+    padding: 30px;
+    margin: 100px auto 30%;
+    /* Centrar vertical y horizontalmente */
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+p{
+    margin: 0;
+}
+
+.btn {
+    width: 50%;
+    /* Cambiado a porcentaje para hacerlo responsive */
+    height: 40px;
+    /* Espaciado superior */
+    border: 1px solid;
+    background: #3D5AF1;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+    transition: .5s;
+}
+
+.container.filedrop{
+    margin-top: 15%;
+}
+
+.file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    max-width: 100%;
+    padding: 100px;
+    border: 1px dashed black;
+    border-radius: 3px;
+    transition: 0.2s;
+    margin-right: auto;
+    margin-left: auto;
+
+    &.is-active {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.fake-btn {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.file-msg {
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+
+    &:focus {
+        outline: none;
+    }
+}

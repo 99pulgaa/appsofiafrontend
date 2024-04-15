@@ -21,6 +21,7 @@ export const FooterComponent = () => {
     return (
         <footer className={`footer ${isVisible ? 'visible' : ''}`}>
             <div className='footer-content'>
+                <br></br>
                 <h2 className="texto">Contacto</h2>
                 <p className="texto"><strong>Teléfono:</strong> +57 3188901261</p>
                 <p className="texto"><strong>Email:</strong> pulgaashelby@gmail.com</p>
