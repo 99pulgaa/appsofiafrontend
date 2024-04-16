@@ -1,0 +1,10 @@
+.fondotabla{
+    width: 100%; /* Cambiado a porcentaje para hacerlo responsive */
+    height: auto; /* Cambiado a auto para hacerlo responsive */
+    border-radius: 5% 5% 5% 5%; /* Simplificado para círculo perfecto */
+    background: #E8E8E8;
+    padding: 30px;
+    margin: 100px auto; /* Centrar vertical y horizontalmente */
+    color: black;
+    text-align: center;
+}

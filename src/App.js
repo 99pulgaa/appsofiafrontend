@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import ListClientesComponents from './components/ListClientesComponents';
+import Revision from './components/Revision';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import InicioComponent from './components/InicioComponent';
@@ -9,7 +8,6 @@ import MenuComponent from './components/MenuComponent';
 import ReporteComponent from './components/ReporteComponent';
 import RegistroComponent from './components/RegistroComponent';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { AddClienteComponent } from './components/AddClienteComponent';
 
 
 function App() {
@@ -28,9 +26,7 @@ function App() {
           <Route path='/InicioComponent' element={<InicioComponent />}></Route>
           <Route path='/RegistroComponent' element={<RegistroComponent />}></Route>
           <Route path='/LoginComponent' element={<LoginComponent />}></Route>
-          <Route path='/ListClientesComponents' element={<ListClientesComponents />}></Route>
-          <Route path='/add-cliente' element={<AddClienteComponent />}></Route>
-          <Route path='/update-cliente/:id' element={<AddClienteComponent />}></Route>
+          <Route path='/Revision' element={<Revision />}></Route>
         </Routes>
        </div>
        <FooterComponent/>

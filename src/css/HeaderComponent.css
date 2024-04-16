@@ -1,6 +1,26 @@
-.acercade {
-    color: #0E153A;
-    left: 90%;
-    top: 35px;
-    font-size: 20px;  
+.nav-link{
+    cursor: pointer;
+    color: gray;
 }
+.nav-link:hover{
+    color: black;
+}
+
+.navbar-brand:hover{
+    color: black;
+}
+
+.revision{
+    color: #0E153A;
+    left: 40vh;
+    font-size: 20px; 
+}
+
+@media (max-width: 768px) {
+    .revision{
+        left: 70%;
+    }
+
+
+}
+

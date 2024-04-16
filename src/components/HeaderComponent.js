@@ -5,34 +5,64 @@ import '../css/HeaderComponent.css';
 
 export const HeaderComponent = () => {
   const [_cliente, setCliente] = useState([]);
+
   useEffect(() => {
     if (!navigator.onLine) {
       if (localStorage.getItem("user-complete") !== null) {
         setCliente(Array.from(localStorage.getItem("user-complete")));
       }
     } else {
-      const URL =
-        `http://localhost:8080/api/v1/clientes/${localStorage.getItem('user')}`;
-      fetch(URL)
-        .then((data) => data.json())
-        .then((data) => {
-          setCliente(data);
-          localStorage.setItem("user-complete", JSON.stringify(data));
-        })
+      if (localStorage.getItem("user") !== null) {
+        const URL =
+          `http://localhost:8080/api/v1/clientes/${localStorage.getItem('user')}`;
+        fetch(URL)
+          .then((data) => data.json())
+          .then((data) => {
+            setCliente(data);
+            localStorage.setItem("user-complete", JSON.stringify(data));
+          })
+      }
     }
   }, []);
 
 
   function adminButton() {
     return (
-      <h2 className="revision" type="button">Revisión</h2>
+      <div className='navbar-scroll'>
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li className='nav-item'>
+            <a className='nav-link' href="/Revision">Revisión</a>
+          </li>
+        </ul>
+      </div>
     );
+  }
+
+  const handleLogout = () => {
+    // Borrar los datos relevantes del localStorage
+    localStorage.clear();
+  };
+
+  function cerrarSesion() {
+    if (_cliente.length !== 0) {
+      return (
+        <ul class="navbar-nav ml-md-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/LoginComponent" onClick={handleLogout} role="button" data-toggle="dropdown" aria-expanded="false">
+              Cerrar sesión
+            </a>
+          </li>
+        </ul>
+      );
+    } else {
+      return ('');
+    }
   }
 
   return (
     <div>
       <header className='header'>
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar navbar-expand bg-light flex-column flex-md-row bd-navbar">
           <a className="navbar-brand" href="/InicioComponent">
             <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="" />
             APPSOFIA
@@ -40,7 +70,16 @@ export const HeaderComponent = () => {
           {
             _cliente.rol === 'ADMIN' ? adminButton() : ''
           }
-          <h2 className="acercade" type="button" onclick="window.location.href='./html/acercade.html';">Acerca de</h2>
+          <div className='navbar-scroll'>
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+              <li className='nav-item'>
+                <a className='nav-link'>Acerca de</a>
+              </li>
+            </ul>
+          </div>
+          {
+            cerrarSesion()
+          }
         </nav>
       </header>
     </div>

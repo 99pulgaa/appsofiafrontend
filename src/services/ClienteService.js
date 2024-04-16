@@ -25,7 +25,6 @@ class ClienteService{
     deleteCliente(clienteId){
         return axios.delete(CLIENTE_BASE_REST_API_URL + '/' + clienteId);
     }
-
 }
 
 export default new ClienteService();

@@ -30,7 +30,7 @@ export const RegistroComponent = () => {
         setContrasena(event);
     };
 
-    function createCliente(header, method, url) {
+    function createCliente() {
         let id = _cedula;
         let nombre = _nombre;
         let fechaNacimiento = new Date(_fechaNacimiento.replace(/-/g, '\/'));
