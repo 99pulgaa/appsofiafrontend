@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../css/RegistroComponent.css';
+import '../css/Registro.css';
 import  {Link, useNavigate} from 'react-router-dom';
 
-export const RegistroComponent = () => {
+export const Registro = () => {
     const [_cedula, setCedula] = useState('');
     const [_nombre, setNombre] = useState('');
     const [_fechaNacimiento, setFechaNacimiento] = useState(null);
@@ -45,7 +45,7 @@ export const RegistroComponent = () => {
             body: JSON.stringify({ id, nombre, fechaNacimiento, email, contrasena }),
         }).then(response => {
             if (response.ok) {
-                navigate('/LoginComponent');
+                navigate('/Login');
                 return response.text();
             } else {
                 throw new Error('Failed to create cliente');
@@ -76,7 +76,7 @@ export const RegistroComponent = () => {
                     <input className="controls" type="password" minLength='8'name="pass" id="pass" placeholder="Contraseña" onChange={e => handleContrasenaChange(e.target.value)} required />
                     <p>Estoy de acuerdo con <a href="#">Términos y condiciones</a></p>
                     <button className='botonregistrar' type="submit">Regístrate</button>
-                    <Link to="/LoginComponent">
+                    <Link to="/Login">
                         <p className="yatengo">Ya tengo cuenta</p>
                     </Link>
                 </form>
@@ -85,4 +85,4 @@ export const RegistroComponent = () => {
     );
 }
 
-export default RegistroComponent;
+export default Registro;

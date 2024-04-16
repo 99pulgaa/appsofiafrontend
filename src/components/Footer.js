@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export const FooterComponent = () => {
+export const Footer = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -31,4 +31,4 @@ export const FooterComponent = () => {
     );
 }
 
-export default FooterComponent;
+export default Footer;

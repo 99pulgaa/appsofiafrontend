@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import '../css/InicioComponent.css';
+import '../css/Inicio.css';
 import txtlogo2 from '../img/txtlogo2.png';
 import { Link } from 'react-router-dom';
 
 
-export const InicioComponent = () => {
+export const Inicio = () => {
     const [_cliente, setCliente] = useState([]);
 
     useEffect(() => {
@@ -29,13 +29,13 @@ export const InicioComponent = () => {
     function isLogged(){
         if(_cliente.length === 0){
             return(
-                <Link to="/LoginComponent">
+                <Link to="/Login">
                 <button className='botonreportar' type="submit">Reportar</button>
             </Link>
             );
         }else{
             return(
-                <Link to="/MenuComponent">
+                <Link to="/Menu">
                 <button className='botonreportar' type="submit">Reportar</button>
             </Link>
             );
@@ -55,4 +55,4 @@ export const InicioComponent = () => {
     );
 }
 
-export default InicioComponent;
+export default Inicio;

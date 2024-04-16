@@ -1,0 +1,71 @@
+/*semicirculo*/
+.formularioacerca{
+    width: 90%;
+    /* Cambiado a porcentaje para hacerlo responsive */
+    max-width: 620px;
+    /* Ancho máximo */
+    height: 65vh;
+    /* Cambiado a auto para hacerlo responsive */
+    border-radius: 46% 46% 0 0;
+    /* Simplificado para círculo perfecto */
+    background: #E8E8E8;
+    padding: 30px;
+    margin: 100px auto;
+    /* Centrar vertical y horizontalmente */
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+hr {
+    background-color: black;
+    height: 0px;
+    width: 20vw;
+    position: absolute;
+    left: 20%;
+    top: 80%;
+}
+
+.logo2 {
+    width: 480px;
+    
+    height: 320px;
+
+    margin: auto;
+    /* Centrado horizontalmente */
+    display: flex;
+    /* Cambiado a flex para alinear elementos */
+    justify-content: space-around;
+    /* Espacio uniforme entre elementos */
+    align-items: center;
+    /* Alinear verticalmente */
+}
+
+
+.info {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    color: black;
+    padding: 30px;
+    width: 80%;
+    left: 10%;
+    font-size: 22px;
+
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        font-size: 3vw;
+        /* Tamaño de fuente responsive para pantallas pequeñas */
+    }
+
+    .logo2 {
+        width: 60vw;
+        height: 30vh;
+        /* Tamaño de fuente responsive para pantallas pequeñas */
+    }
+
+
+}

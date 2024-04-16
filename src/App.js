@@ -1,12 +1,13 @@
 import './App.css';
 import Revision from './components/Revision';
-import HeaderComponent from './components/HeaderComponent';
-import FooterComponent from './components/FooterComponent';
-import InicioComponent from './components/InicioComponent';
-import LoginComponent from './components/LoginComponent';
-import MenuComponent from './components/MenuComponent';
-import ReporteComponent from './components/ReporteComponent';
-import RegistroComponent from './components/RegistroComponent';
+import Header from './components/Header';
+import AcercaDe from './components/AcercaDe';
+import Footer from './components/Footer';
+import Inicio from './components/Inicio';
+import Login from './components/Login';
+import Menu from './components/Menu';
+import Reporte from './components/Reporte';
+import Registro from './components/Registro';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -17,19 +18,20 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-       <HeaderComponent/>
+       <Header/>
        <div className='container'>
         <Routes>
-          <Route exact path='/' element={<InicioComponent />}></Route>
-          <Route path='/MenuComponent' element={<MenuComponent />}></Route>
-          <Route path='/ReporteComponent' element={<ReporteComponent />}></Route>
-          <Route path='/InicioComponent' element={<InicioComponent />}></Route>
-          <Route path='/RegistroComponent' element={<RegistroComponent />}></Route>
-          <Route path='/LoginComponent' element={<LoginComponent />}></Route>
+          <Route exact path='/' element={<Inicio />}></Route>
+          <Route path='/Menu' element={<Menu />}></Route>
+          <Route path='/Reporte' element={<Reporte />}></Route>
+          <Route path='/Inicio' element={<Inicio />}></Route>
+          <Route path='/Registro' element={<Registro />}></Route>
+          <Route path='/Login' element={<Login />}></Route>
           <Route path='/Revision' element={<Revision />}></Route>
+          <Route path='/AcercaDe' element={<AcercaDe />}></Route>
         </Routes>
        </div>
-       <FooterComponent/>
+       <Footer/>
       </BrowserRouter>
     </div>
   );

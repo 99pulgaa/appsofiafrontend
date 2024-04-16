@@ -100,14 +100,14 @@ export const Revision = () => {
     function isAuditado(auditado, user, _reporte) {
         if (auditado) {
             return(
-                <p>Ya estoy auditado</p>
+                <span class="badge bg-success">Auditado</span>
             );
         } else {
             return (
                 <td>
-                    <button onClick={() => aprobarReporte(user.id, _reporte.id)}>Aprobar
+                    <button class="btn btn-outline-success" onClick={() => aprobarReporte(user.id, _reporte.id)}>Aprobar
                     </button>
-                    <button onClick={() => denegarReporte(user.id, _reporte.id)}>Denegar
+                    <button class="btn btn-outline-danger" onClick={() => denegarReporte(user.id, _reporte.id)}>Denegar
                     </button>
                 </td>
 
@@ -136,7 +136,7 @@ export const Revision = () => {
                                     <td>{user.nombre}</td>
                                     <td>{user.email}</td>
                                     <td>
-                                        <button onClick={() => blobToPDF(`${user.nombre}_${user.id}`, _reporte.reporte)}>Ver reporte</button>
+                                        <button class="btn btn-outline-info" onClick={() => blobToPDF(`${user.nombre}_${user.id}`, _reporte.reporte)}>Ver reporte</button>
                                     </td>
                                     <td>{user.rol}</td>
                                     {

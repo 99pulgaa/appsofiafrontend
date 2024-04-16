@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../img/icon.png';
-import '../css/HeaderComponent.css';
+import '../css/Header.css';
 
 
-export const HeaderComponent = () => {
+export const Header = () => {
   const [_cliente, setCliente] = useState([]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export const HeaderComponent = () => {
       return (
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/LoginComponent" onClick={handleLogout} role="button" data-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link" href="/Login" onClick={handleLogout} role="button" data-toggle="dropdown" aria-expanded="false">
               Cerrar sesión
             </a>
           </li>
@@ -63,7 +63,7 @@ export const HeaderComponent = () => {
     <div>
       <header className='header'>
         <nav className="navbar navbar-expand bg-light flex-column flex-md-row bd-navbar">
-          <a className="navbar-brand" href="/InicioComponent">
+          <a className="navbar-brand" href="/Inicio">
             <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="" />
             APPSOFIA
           </a>
@@ -73,7 +73,7 @@ export const HeaderComponent = () => {
           <div className='navbar-scroll'>
             <ul class="navbar-nav bd-navbar-nav flex-row">
               <li className='nav-item'>
-                <a className='nav-link'>Acerca de</a>
+                <a className='nav-link' onClick={() => { window.location.href = '/AcercaDe'; }}>Acerca de</a>
               </li>
             </ul>
           </div>
@@ -86,4 +86,4 @@ export const HeaderComponent = () => {
   )
 }
 
-export default HeaderComponent;
+export default Header;

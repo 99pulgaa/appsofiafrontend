@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../css/LoginComponent.css';
+import '../css/Login.css';
 import txtlogo from '../img/txtlogo.png';
 import { Link, useNavigate } from 'react-router-dom';
 
-export const LoginComponent = () => {
+export const Login = () => {
     const [_email, setEmail] = useState('');
     const [_contrasena, setContrasena] = useState('');
     const [cliente, setCliente] = useState();
@@ -51,7 +51,7 @@ export const LoginComponent = () => {
             const perfil = cliente[0].id;
             localStorage.setItem('user', perfil);
             localStorage.setItem('user-complete', cliente[0]);
-            navigate("/MenuComponent")
+            navigate("/Menu")
             window.location.reload();
         } else {
             setIncorrect(!incorrect);
@@ -84,7 +84,7 @@ export const LoginComponent = () => {
                         <div className="recordar"><a href="../html/forgetpass.html">¿Olvidó su contraseña?</a></div>
                         <button className="botoniniciar" type="submit">Iniciar</button>
                         <div className="registrarse">
-                            Quiero hacer el <Link to="/RegistroComponent">registro</Link>
+                            Quiero hacer el <Link to="/Registro">registro</Link>
                         </div>
                     </form>
                 </div>
@@ -93,4 +93,4 @@ export const LoginComponent = () => {
     );
 }
 
-export default LoginComponent;
+export default Login;

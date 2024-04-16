@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import '../css/ReporteComponent.css';
+import '../css/Reporte.css';
 import { Link, useNavigate } from 'react-router-dom';
 
-export const ReporteComponent = () => {
+export const Reporte = () => {
     const [_cliente, setCliente] = useState([]);
     const [reporte, setReporte] = useState([]);
     const navigate = useNavigate();
@@ -43,7 +43,7 @@ export const ReporteComponent = () => {
             body: _body,
         }).then(response => {
             if (response.ok) {
-                navigate('/MenuComponent');
+                navigate('/Menu');
                 return response.text();
             } else {
                 throw new Error('Failed to upload file');
@@ -88,7 +88,7 @@ export const ReporteComponent = () => {
                             <p>Recuerda subir el archivo en formato (pdf, png, jpg).</p>
                             <br></br>
                             <br></br>
-                            <button className="btn" type="submit" > Entregar tu evidencia</button>
+                            <button className="bton" type="submit" > Entregar tu evidencia</button>
                         </div>
                     </form>
                 </div>
@@ -96,4 +96,4 @@ export const ReporteComponent = () => {
         </div>
     );
 }
-export default ReporteComponent;
+export default Reporte;

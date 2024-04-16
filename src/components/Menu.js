@@ -1,10 +1,10 @@
 import React from 'react';
-import '../css/MenuComponent.css';
+import '../css/Menu.css';
 import person from '../img/person.png';
 import libreta from '../img/libreta.png';
 import { Link } from 'react-router-dom';
 
-export const MenuComponent = () => {
+export const Menu = () => {
     return (
         <div>
             <section className='formulariomenu'>
@@ -12,14 +12,14 @@ export const MenuComponent = () => {
                 <h2 className="bienvenido">¡Bienvenido!</h2>
                 <p className="queharas">¿Qué harás hoy?</p>
                 <div className="imagenes">
-                    <div className="reporte" onClick={() => { window.location.href = '/ReporteComponent'; }}><img src={libreta} width="100" height="100" /> </div>
+                    <div className="reporte" onClick={() => { window.location.href = '/Reporte'; }}><img src={libreta} width="100" height="100" /> </div>
                     </div>
                     <div className="textos">
-                        <h2 className="texto2"><Link className='zelda' to="/ReporteComponent">REPORTES</Link></h2>
+                        <h2 className="texto2"><Link className='zelda' to="/Reporte">REPORTES</Link></h2>
                     </div>
             </section>
         </div>
     );
 }
 
-export default MenuComponent;
+export default Menu;
