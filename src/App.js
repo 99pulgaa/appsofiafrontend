@@ -8,13 +8,12 @@ import Login from './components/Login';
 import Menu from './components/Menu';
 import Reporte from './components/Reporte';
 import Registro from './components/Registro';
+import OlvidastePass from './components/OlvidastePass';
+import RecuperarPass from './components/RecuperarPass';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 function App() {
-  
-
-
   return (
     <div>
       <BrowserRouter>
@@ -25,6 +24,8 @@ function App() {
           <Route path='/Menu' element={<Menu />}></Route>
           <Route path='/Reporte' element={<Reporte />}></Route>
           <Route path='/Inicio' element={<Inicio />}></Route>
+          <Route path='/OlvidastePass' element={<OlvidastePass />}></Route>
+          <Route path='/RecuperarPass' element={<RecuperarPass />}></Route>
           <Route path='/Registro' element={<Registro />}></Route>
           <Route path='/Login' element={<Login />}></Route>
           <Route path='/Revision' element={<Revision />}></Route>
